@@ -1,0 +1,60 @@
+.restaurant-ordercard {
+  min-height: 100px;
+  padding: 20px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__payment {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__status {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+
+    span {
+      color: green;
+    }
+
+    &.is-declined {
+      span {
+        color: red;
+      }
+    }
+  }
+
+  .dish-list {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 18px;
+
+    &__title {
+      font-weight: 700;
+    }
+
+    &__values {
+      padding-left: 20px;
+
+      li {
+        margin-top: 5px;
+      }
+    }
+  }
+}

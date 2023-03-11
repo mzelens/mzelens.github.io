@@ -1,0 +1,47 @@
+@import './src/constants/variables';
+
+.promo1 {
+  &__section {
+    background-image: url(https://www.lekste.lt/dist/img/static/marketing/hero-bg.png);
+    background-repeat: no-repeat;
+    background-position: 80%;
+    background-size: cover;
+    padding: 50px 0;
+    color: #fff;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  &__title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 50px;
+  }
+  &__description {
+    font-size: 24px;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    &-item {
+      font-size: 30px;
+      span {
+        color: #ec6531;
+      }
+      &::before {
+        content: '• ';
+      }
+    }
+  }
+  &__btns {
+    display: flex;
+    gap: 15px;
+    @media only screen and (max-width: $screen-md) {
+      flex-direction: column;
+      padding: 0 30px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import './src/constants/variables';
+
+.cookie-modal {
+  max-height: 90vh;
+  overflow: auto;
+
+  @media screen and (max-width: $screen-md) {
+    max-width: 90vw !important;
+  }
+
+  &__footer {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media screen and (max-width: $screen-md) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  &__accept {
+    @media screen and (max-width: $screen-md) {
+      order: -1;
+    }
+  }
+}

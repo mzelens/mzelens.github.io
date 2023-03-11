@@ -1,0 +1,42 @@
+@import './src/constants/variables';
+
+.couriers-dashboard {
+  padding: 40px;
+  background-color: #fff;
+
+  @media screen and (max-width: $screen-md) {
+    padding: 20px;
+  }
+
+  &__tablist {
+    @media screen and (max-width: $screen-sm) {
+      flex-direction: column !important;
+      border-bottom: none !important;
+    }
+
+    button {
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @media screen and (max-width: $screen-sm) {
+        margin-bottom: 0 !important;
+
+        &[aria-selected='true'],
+        &[data-selected] {
+          border-color: initial !important;
+          border-radius: 6px !important;
+        }
+      }
+    }
+  }
+
+  &__tabpanels {
+    padding-top: 40px;
+  }
+
+  &__empty {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

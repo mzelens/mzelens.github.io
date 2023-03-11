@@ -1,0 +1,15 @@
+.address-form {
+  width: 600px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__control {
+    margin-bottom: 20px !important;
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

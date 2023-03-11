@@ -1,0 +1,27 @@
+.customer-dataform {
+  width: 600px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__control {
+    margin-bottom: 20px;
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__actionbar {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid red;
+
+    button {
+      flex: 1 0 0;
+    }
+  }
+}

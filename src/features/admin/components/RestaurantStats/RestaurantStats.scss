@@ -1,0 +1,21 @@
+@import './src/constants/variables';
+
+.restaurant-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  background-color: #fff;
+
+  @media screen and (max-width: $screen-md) {
+    padding: 20px;
+  }
+
+  &__block {
+    padding: 20px;
+  }
+
+  @media screen and (max-width: $screen-sm) {
+    grid-template-columns: 1fr;
+  }
+}

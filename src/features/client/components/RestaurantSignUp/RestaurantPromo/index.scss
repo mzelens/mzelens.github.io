@@ -1,0 +1,58 @@
+@import './src/constants/variables';
+
+.promo2 {
+  &__section {
+    padding: 50px 0;
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    p {
+      margin-top: 15px;
+    }
+    button {
+      margin-top: 25px;
+    }
+  }
+  &__title {
+    font-size: 38px;
+    line-height: 50px;
+    font-weight: 600;
+    color: #4e4e4e;
+  }
+  &__img {
+    width: 100%;
+    background-image: url(https://www.lekste.lt/dist/img/static/marketing/section-2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @media only screen and (max-width: $screen-xl) {
+      flex: 1;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-weight: 700;
+    }
+    @media only screen and (max-width: $screen-xl) {
+      flex: 1;
+    }
+  }
+  @media only screen and (max-width: $screen-md) {
+    &__section {
+      padding: 0 0 50px 0;
+    }
+    &__wrapper {
+      margin-top: 30px;
+      gap: 30px;
+      flex-direction: column;
+    }
+    &__img {
+      flex: unset;
+      height: 200px;
+    }
+  }
+}

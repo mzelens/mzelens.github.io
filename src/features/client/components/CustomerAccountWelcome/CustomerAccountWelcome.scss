@@ -1,0 +1,63 @@
+@import './src/constants/variables';
+
+.customer-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: $screen-md) {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__info {
+    flex: 1 0;
+  }
+
+  &__name {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+
+    @media screen and (max-width: $screen-md) {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+
+  .welcome-contacts {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: $screen-md) {
+      flex-direction: column;
+    }
+
+    &__item {
+      flex: 1 0 auto;
+
+      @media screen and (max-width: $screen-md) {
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__value {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

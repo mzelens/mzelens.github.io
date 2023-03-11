@@ -1,0 +1,56 @@
+@import './src/constants/variables';
+
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid grey;
+  border-radius: 10px;
+
+  @media screen and (max-width: $screen-md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &__list {
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+
+    li {
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 140px;
+
+    @media screen and (max-width: $screen-md) {
+      flex-basis: 0;
+    }
+  }
+}

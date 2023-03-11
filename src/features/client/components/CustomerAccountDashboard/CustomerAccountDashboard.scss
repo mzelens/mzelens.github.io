@@ -1,0 +1,40 @@
+@import './src/constants/variables';
+
+.customer-dashboard {
+  padding: 40px 20px;
+  background-color: #fff;
+
+  @media screen and (max-width: $screen-md) {
+    padding: 20px;
+  }
+
+  &__tablist {
+    @media screen and (max-width: $screen-md) {
+      flex-direction: column !important;
+      border-bottom: none !important;
+    }
+
+    button {
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @media screen and (max-width: $screen-md) {
+        margin-bottom: 0 !important;
+
+        &[aria-selected='true'],
+        &[data-selected] {
+          border-color: initial !important;
+          border-radius: 6px !important;
+        }
+      }
+    }
+  }
+
+  &__tabpanels {
+    padding-top: 100px;
+
+    @media screen and (max-width: $screen-md) {
+      padding-top: 40px;
+    }
+  }
+}

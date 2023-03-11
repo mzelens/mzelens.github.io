@@ -1,0 +1,18 @@
+@import './src/constants/variables';
+
+.restaurant-orders {
+  padding: 40px;
+  background-color: #fff;
+
+  @media screen and (max-width: $screen-md) {
+    padding: 20px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}

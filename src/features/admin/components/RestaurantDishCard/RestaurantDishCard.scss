@@ -1,0 +1,85 @@
+@import './src/constants/variables';
+
+.dish-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 160px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &.is-draft {
+    &::before {
+      content: 'draft';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      z-index: 10;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: red;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 15px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    & > * {
+      opacity: 0.3;
+    }
+  }
+
+  @media screen and (max-width: $screen-xl) {
+    flex-direction: column;
+  }
+
+  &__image {
+    flex: 0 0 200px;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: $screen-xl) {
+      flex-basis: 160px;
+    }
+
+    @media screen and (max-width: $screen-md) {
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    padding: 20px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__price {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

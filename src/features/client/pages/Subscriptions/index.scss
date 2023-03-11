@@ -1,0 +1,43 @@
+@import './src/constants/variables';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.restaurant-signup {
+  &__container {
+    width: 1120px;
+    margin: 0 auto;
+  }
+  &__text,
+  &__title,
+  &__text-big {
+    color: #4e4e4e;
+  }
+  &__text {
+    font-size: 20px;
+  }
+  &__title {
+    font-size: 38px;
+  }
+  &__text-big {
+    font-size: 24px;
+  }
+  @media only screen and (max-width: $screen-xl) {
+    &__container {
+      width: 720px;
+    }
+  }
+  @media only screen and (max-width: $screen-md) {
+    &__container {
+      width: 100vw;
+      text-align: center;
+      padding: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import './src/constants/variables';
+
+.restaurant-dishes {
+  padding: 40px;
+  background-color: #fff;
+
+  @media screen and (max-width: $screen-md) {
+    padding: 20px;
+  }
+
+  .dish-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media screen and (max-width: $screen-600p) {
+      grid-template-columns: 1fr;
+    }
+
+    &__empty {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

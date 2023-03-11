@@ -1,0 +1,99 @@
+@import './src/constants/variables';
+
+.customer-orderlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  .order-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+
+    @media screen and (max-width: $screen-md) {
+      gap: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--chakra-colors-blue-500);
+
+      @media screen and (max-width: $screen-md) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      flex: 1 1;
+      gap: 20px;
+
+      @media screen and (max-width: $screen-450p) {
+        gap: 5px 10px;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &__restaurant {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+
+      @media screen and (max-width: $screen-md) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &__date {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__price {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+
+      @media screen and (max-width: $screen-md) {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__btn {
+      flex-shrink: 0;
+    }
+  }
+
+  &__empty {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}

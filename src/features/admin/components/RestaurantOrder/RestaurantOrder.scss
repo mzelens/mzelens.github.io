@@ -1,0 +1,63 @@
+@import './src/constants/variables';
+
+.restaurant-order {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  @media screen and (max-width: $screen-xl) {
+    grid-template-columns: 1fr;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &__status {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+
+    span {
+      color: green;
+    }
+
+    &.is-declined {
+      span {
+        color: red;
+      }
+    }
+  }
+
+  &__payment {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .dishes-form {
+    &__control {
+      margin-bottom: 20px;
+    }
+
+    &__button {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}
+
+.dishes-modal {
+  &__footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media screen and (max-width: $screen-xl) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
