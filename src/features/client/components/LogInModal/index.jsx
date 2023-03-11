@@ -14,17 +14,12 @@ import {
   Stack,
 } from '@chakra-ui/react';
 
-import { useDispatch } from 'react-redux';
-import { add } from '../../../../store/reducers/userReducer';
 import { useForm } from 'react-hook-form';
 
 function LogInModal({ isOpen, onClose, onSignupModalOpen }) {
-  const dispatch = useDispatch();
-
   const { handleSubmit, register, reset } = useForm();
 
-  const onSubmit = (data) => {
-    dispatch(add({ email: data.email, password: data.password }));
+  const onSubmit = () => {
     onClose();
     reset();
   };
