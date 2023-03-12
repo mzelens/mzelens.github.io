@@ -98,7 +98,12 @@ function RestaurantInspectCard({ deal, cartOpened }) {
           </Flex>
         </Flex>
         <Box overflow="hidden" rounded="md" maxW={{ base: '40%', md: '50%' }}>
-          <Image src={deal.recipeThumb} height="100%" objectFit="cover" />
+          <Image
+            src={deal.recipeThumb}
+            width="100%"
+            height="100%"
+            objectFit="cover"
+          />
         </Box>
       </Flex>
       <RestaurantInspectModal deal={deal} isOpen={isOpen} onClose={onClose} />

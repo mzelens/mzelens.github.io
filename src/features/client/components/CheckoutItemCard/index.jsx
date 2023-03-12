@@ -17,7 +17,7 @@ function CheckoutItemCard({ dish }) {
             src={dish.recipeThumb}
             marginRight="10px"
             rounded="md"
-            boxSize="100%"
+            height="100%"
             objectFit="cover"
           />
         </Box>
