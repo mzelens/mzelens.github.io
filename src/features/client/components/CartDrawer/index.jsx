@@ -25,12 +25,14 @@ import {
   increaseItemQuantity,
   deleteItem,
 } from '../../../../store/reducers/cartReducer';
+import { useNavigate } from 'react-router';
 
 function CartDrawer() {
   const location = useLocation();
 
   const [visible, setVisible] = useState(true);
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const increaseQuantity = (id) => dispatch(increaseItemQuantity(id));
   const decreaseQuantity = (id) => dispatch(decreaseItemQuantity(id));
@@ -62,6 +64,11 @@ function CartDrawer() {
 
   const quantityTotal = () =>
     cartItems.reduce((acc, cur) => acc + cur.quantity, 0);
+
+  const onCheckout = () => {
+    onClose();
+    navigate('/checkout');
+  };
 
   return (
     <>
@@ -180,6 +187,7 @@ function CartDrawer() {
               display="flex"
               justifyContent="space-between"
               alignItems="center"
+              onClick={onCheckout}
             >
               <Box as="p">
                 <Box

@@ -75,7 +75,7 @@ function CustomerOrderStatus() {
         <Button
           size="lg"
           mt="20px"
-          width="50%"
+          width="60%"
           bg="#3182ce"
           color="#ffffff"
           onClick={() => navigate('/')}
